@@ -13,4 +13,8 @@ public interface TenantRepository extends JpaRepository<Tenant, Long> {
             "OR LOWER(t.guardianName) LIKE LOWER(CONCAT('%', :query, '%')) " +
             "OR t.contactNo LIKE CONCAT('%', :query, '%')")
     List<Tenant> searchTenants(@Param("query") String query);
+
+
+    List<Tenant> findByBuilding(String building);
+
 }

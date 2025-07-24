@@ -57,4 +57,10 @@ public class TenantService  {
     public List<Tenant> search(String query) {
         return tenantRepository.searchTenants(query);
     }
+
+    public List<Tenant> getTenantsByBuilding(String building) {
+        return tenantRepository.findByBuilding(building);
+    }
+
+
 }

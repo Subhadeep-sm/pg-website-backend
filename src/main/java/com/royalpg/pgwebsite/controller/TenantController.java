@@ -52,4 +52,14 @@ public class TenantController {
     public List<Tenant> searchAny(@RequestParam String query) {
         return tenantService.search(query);
     }
+
+    @GetMapping("/by-building/{building}")
+    public ResponseEntity<List<Tenant>> getTenantsByBuilding(@PathVariable String building) {
+        List<Tenant> tenants = tenantService.getTenantsByBuilding(building);
+        return ResponseEntity.ok(tenants);
+    }
+
+
+
+
 }
