@@ -35,4 +35,10 @@ public class TenantController {
     public ResponseEntity<Tenant> getTenantById(@PathVariable Long id) {
         return new ResponseEntity<>(tenantService.getTenantById(id), HttpStatus.OK);
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Tenant> updateTenant(@PathVariable Long id, @RequestBody Tenant updatedTenant) {
+        Tenant tenant = tenantService.updateTenant(id, updatedTenant);
+        return new ResponseEntity<>(tenant, HttpStatus.OK);
+    }
 }

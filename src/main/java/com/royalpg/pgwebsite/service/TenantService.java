@@ -30,4 +30,21 @@ public class TenantService  {
         return tenantRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Tenant not found with id: " + id));
     }
+
+    public Tenant updateTenant(Long id, Tenant updatedTenant) {
+        Tenant existingTenant = tenantRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tenant not found with id: " + id));
+
+        existingTenant.setName(updatedTenant.getName());
+        existingTenant.setContactNo(updatedTenant.getContactNo());
+        existingTenant.setGuardianName(updatedTenant.getGuardianName());
+        existingTenant.setGuardianContactNo(updatedTenant.getGuardianContactNo());
+        existingTenant.setRent(updatedTenant.getRent());
+        existingTenant.setAdmissionDate(updatedTenant.getAdmissionDate());
+        existingTenant.setAddress(updatedTenant.getAddress());
+        existingTenant.setWork(updatedTenant.getWork());
+        existingTenant.setBuilding(updatedTenant.getBuilding());
+
+        return tenantRepository.save(existingTenant);
+    }
 }
