@@ -47,4 +47,10 @@ public class TenantService  {
 
         return tenantRepository.save(existingTenant);
     }
+
+    public void deleteTenant(Long id) {
+        Tenant existingTenant = tenantRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tenant not found with id: " + id));
+        tenantRepository.delete(existingTenant);
+    }
 }

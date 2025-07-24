@@ -41,4 +41,10 @@ public class TenantController {
         Tenant tenant = tenantService.updateTenant(id, updatedTenant);
         return new ResponseEntity<>(tenant, HttpStatus.OK);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<String> deleteTenant(@PathVariable Long id) {
+        tenantService.deleteTenant(id);
+        return ResponseEntity.ok("Tenant deleted successfully with id: " + id);
+    }
 }
