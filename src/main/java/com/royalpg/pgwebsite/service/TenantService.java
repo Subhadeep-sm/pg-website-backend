@@ -53,4 +53,8 @@ public class TenantService  {
                 .orElseThrow(() -> new RuntimeException("Tenant not found with id: " + id));
         tenantRepository.delete(existingTenant);
     }
+
+    public List<Tenant> search(String query) {
+        return tenantRepository.searchTenants(query);
+    }
 }

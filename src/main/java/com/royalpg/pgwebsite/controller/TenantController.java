@@ -47,4 +47,9 @@ public class TenantController {
         tenantService.deleteTenant(id);
         return ResponseEntity.ok("Tenant deleted successfully with id: " + id);
     }
+
+    @GetMapping("/search-any")
+    public List<Tenant> searchAny(@RequestParam String query) {
+        return tenantService.search(query);
+    }
 }
