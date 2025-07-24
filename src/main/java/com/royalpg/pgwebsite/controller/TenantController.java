@@ -3,10 +3,15 @@ package com.royalpg.pgwebsite.controller;
 import com.royalpg.pgwebsite.entity.Tenant;
 import com.royalpg.pgwebsite.service.TenantService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.core.io.ByteArrayResource;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.util.List;
 
 @RestController
@@ -57,6 +62,18 @@ public class TenantController {
     public ResponseEntity<List<Tenant>> getTenantsByBuilding(@PathVariable String building) {
         List<Tenant> tenants = tenantService.getTenantsByBuilding(building);
         return ResponseEntity.ok(tenants);
+    }
+
+    @GetMapping("/download")
+    public ResponseEntity<ByteArrayResource> downloadTenantsExcel() throws IOException {
+        ByteArrayOutputStream out = tenantService.exportTenantsToExcel();
+        ByteArrayResource resource = new ByteArrayResource(out.toByteArray());
+
+        return ResponseEntity.ok()
+                .header(HttpHeaders.CONTENT_DISPOSITION, "attachment; filename=tenants.xlsx")
+                .contentType(MediaType.parseMediaType("application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"))
+                .contentLength(resource.contentLength())
+                .body(resource);
     }
 
 

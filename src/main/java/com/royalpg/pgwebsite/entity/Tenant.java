@@ -20,9 +20,10 @@ public class Tenant {
     private String contactNo;
     private String guardianName;
     private String guardianContactNo;
-    private Double rent;
     private LocalDate admissionDate;
-    private String address;
-    private String work;
+    private String workPlace;
+    private String aadhaarNo;
     private String building;
+    private String roomNo;
+    private String roomType;
 }
