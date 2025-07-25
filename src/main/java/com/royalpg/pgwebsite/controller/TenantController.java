@@ -16,7 +16,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/tenants")
-@CrossOrigin(origins = "*") // Allow frontend to access
+//@CrossOrigin(origins = "*") // Allow frontend to access
 public class TenantController {
 
     private final TenantService tenantService;
