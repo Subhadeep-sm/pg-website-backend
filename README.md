@@ -4,14 +4,14 @@ This project is a backend system for managing a Paying Guest (PG) accommodation 
 
 ---
 
-## Architecture
+## 🏗️ Architecture
 
-- **Spring Boot 3.5.3**: Main application framework.
-- **Spring Data JPA**: ORM for MySQL database.
-- **Lombok**: Reduces boilerplate code for entities and models.
-- **Apache POI**: For Excel export functionality.
-- **MySQL**: Primary database (configurable via environment variables).
-- **Docker**: Multi-stage build for efficient containerization.
+- 🚀 **Spring Boot 3.5.3**: Main application framework.
+- 🛠️ **Spring Data JPA**: ORM for MySQL database.
+- ✨ **Lombok**: Reduces boilerplate code for entities and models.
+- 📊 **Apache POI**: For Excel export functionality.
+- 🐬 **MySQL**: Primary database (configurable via environment variables).
+- 🐳 **Docker**: Multi-stage build for efficient containerization.
 
 ---
 
