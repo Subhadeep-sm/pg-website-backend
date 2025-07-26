@@ -26,47 +26,7 @@ This project is a backend system for managing a Paying Guest (PG) accommodation 
 
 
 
----
 
-
-
-### Tenant
-
-| Field              | Type        | Description                       |
-|--------------------|-------------|-----------------------------------|
-| id                 | Long        | Auto-generated primary key        |
-| name               | String      | Tenant's name                     |
-| contactNo          | String      | Tenant's contact number           |
-| guardianName       | String      | Guardian's name                   |
-| guardianContactNo  | String      | Guardian's contact number         |
-| admissionDate      | LocalDate   | Date of admission                 |
-| workPlace          | String      | Tenant's workplace                |
-| aadhaarNo          | String      | Aadhaar number                    |
-| building           | String      | Building name                     |
-| roomNo             | String      | Room number                       |
-| roomType           | String      | Room type (e.g., Single, Double)  |
-
-### Building
-
-| Field | Type   | Description                |
-|-------|--------|----------------------------|
-| id    | Long   | Auto-generated primary key |
-| name  | String | Unique building name       |
-
-### Rent
-
-| Field     | Type    | Description                        |
-|-----------|---------|------------------------------------|
-| id        | Long    | Auto-generated primary key         |
-| roomType  | String  | Room type (unique)                 |
-| lowRent   | double  | Lower bound of rent for room type  |
-| highRent  | double  | Upper bound of rent for room type  |
-
----
-
-
-**Note:**  
-Database credentials and URL are expected as environment variables for security.
 
 ---
 
@@ -111,6 +71,18 @@ Database credentials and URL are expected as environment variables for security.
      -e SPRING_DATASOURCE_PASSWORD=<password> \
      royalpg-backend
    ```
+
+
+---
+
+
+
+**Note:**  
+Database credentials and URL are expected as environment variables for security.
+
+---
+
+**Made with ❤️ for Royal PG.**
 
 ---
 
