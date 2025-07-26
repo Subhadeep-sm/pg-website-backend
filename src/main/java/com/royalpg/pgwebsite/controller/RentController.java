@@ -12,7 +12,6 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/rent")
-@CrossOrigin(origins = "*")
 public class RentController {
 
     @Autowired
