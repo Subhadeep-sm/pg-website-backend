@@ -1,6 +1,6 @@
 # 🏠 Royal PG Website Backend
 
-This project is a backend system for managing a Paying Guest (PG) accommodation business, built using **Spring Boot**. It offers RESTful APIs to manage tenants, buildings, and rent-related information. The system also supports features like tenant search, Excel data export, and is fully CORS-enabled for frontend integration. Designed with scalability and maintainability in mind, it can be deployed as a standalone service or within a Docker container.
+This project is a backend system for managing a Paying Guest (PG) accommodation business, built using **Spring Boot**. It offers RESTful APIs to manage tenants, buildings and rent-related information. The system also supports features like tenant search and Excel data export. Designed with scalability and maintainability in mind, it can be deployed as a standalone service or within a Docker container.
 
 ---
 
