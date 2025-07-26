@@ -1,36 +1,6 @@
-# Royal PG Website Backend
+# 🏠 Royal PG Website Backend
 
-This project is a backend system for managing a Paying Guest (PG) accommodation business, built using **Spring Boot**. It provides RESTful APIs for managing tenants, buildings, and rent information, and supports features such as tenant search, Excel export, and CORS for frontend integration. The backend is designed to be deployed as a standalone service or within a Docker container.
-
----
-
-## Table of Contents
-
-- [Features](#features)
-- [Architecture](#architecture)
-- [API Overview](#api-overview)
-  - [Tenant Management](#tenant-management)
-  - [Building Management](#building-management)
-  - [Rent Management](#rent-management)
-- [Data Models](#data-models)
-- [Configuration](#configuration)
-- [Running the Application](#running-the-application)
-  - [Locally (Maven)](#locally-maven)
-  - [With Docker](#with-docker)
-- [Dependencies](#dependencies)
-- [Development Notes](#development-notes)
-- [License](#license)
-
----
-
-## Features
-
-- **Tenant Management**: Add, update, delete, search, and list tenants. Export tenant data to Excel.
-- **Building Management**: Add, delete, and list buildings.
-- **Rent Management**: Set, update, and retrieve rent details for different room types.
-- **Search**: Search tenants by name, guardian name, or contact number.
-- **Excel Export**: Download all tenant data as an Excel file.
-- **OpenAPI/Swagger**: API documentation available via Springdoc OpenAPI.
+This project is a backend system for managing a Paying Guest (PG) accommodation business, built using **Spring Boot**. It offers RESTful APIs to manage tenants, buildings, and rent-related information. The system also supports features like tenant search, Excel data export, and is fully CORS-enabled for frontend integration. Designed with scalability and maintainability in mind, it can be deployed as a standalone service or within a Docker container.
 
 ---
 
@@ -42,6 +12,19 @@ This project is a backend system for managing a Paying Guest (PG) accommodation 
 - **Apache POI**: For Excel export functionality.
 - **MySQL**: Primary database (configurable via environment variables).
 - **Docker**: Multi-stage build for efficient containerization.
+
+---
+
+## ✨ Features
+
+- ✅ **Tenant Management**: Add, update, delete, list, and search tenants. Export tenant data to Excel.
+- 🏢 **Building Management**: Add, delete, and fetch all buildings.
+- 💰 **Rent Management**: Set, update, and retrieve rent details for various room types.
+- 🔍 **Advanced Search**: Search tenants by name, guardian name, or contact number.
+- 📥 **Excel Export**: Export all tenant data to a downloadable Excel file.
+- 📘 **OpenAPI / Swagger**: Interactive API documentation via Springdoc OpenAPI.
+
+
 
 ---
 
@@ -87,6 +70,19 @@ Database credentials and URL are expected as environment variables for security.
 
 ---
 
+## 🧩 Technologies Used
+
+- **Spring Boot** – Web and backend logic  
+- **Spring Data JPA** – Database interaction  
+- **MySQL** – Relational data storage  
+- **Lombok** – Cleaner entity/model code  
+- **Apache POI** – Excel generation  
+- **Springdoc OpenAPI** – Swagger UI  
+- **Docker** – Containerization  
+- **JUnit** – Testing framework 
+
+---
+
 ## Running the Application
 
 ### Locally (Maven)
@@ -118,12 +114,5 @@ Database credentials and URL are expected as environment variables for security.
 
 ---
 
-## Dependencies
 
-- Spring Boot (Web, Data JPA)
-- MySQL Connector/J
-- Lombok
-- Apache POI (Excel export)
-- Springdoc OpenAPI (Swagger UI)
-- JUnit (testing)
 
